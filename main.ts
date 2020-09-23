@@ -3,11 +3,20 @@ bluetooth.onBluetoothConnected(function () {
 })
 bluetooth.onBluetoothDisconnected(function () {
     basic.showLeds(`
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
+        . . . . .
+        . # # . .
+        . # . # .
+        . . # # .
+        . . . . .
+        `)
+})
+input.onButtonPressed(Button.A, function () {
+    basic.showLeds(`
+        # . . . .
+        . # . . .
+        . . # # #
+        . # # . #
+        . # # # #
         `)
 })
 bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () {
